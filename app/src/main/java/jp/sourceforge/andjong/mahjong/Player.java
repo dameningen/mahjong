@@ -2,216 +2,195 @@ package jp.sourceforge.andjong.mahjong;
 
 /**
  * プレイヤーを管理するクラスです。
- *
  * @author Yuji Urushibara
- *
  */
 class Player {
-	/** EventIF */
-	private EventIf eventIf;
+    /** EventIF */
+    private EventIf eventIf;
 
-	/**
-	 * EventIFを取得します。。
-	 *
-	 * @return EventIF
-	 */
-	EventIf getEventIf() {
-		return eventIf;
-	}
+    /**
+     * EventIFを取得します。。
+     * @return EventIF
+     */
+    EventIf getEventIf() {
+        return eventIf;
+    }
 
-	/** 手牌 */
-	private Tehai m_tehai = new Tehai();
+    /** 手牌 */
+    private Tehai m_tehai = new Tehai();
 
-	/**
-	 * 手牌を取得します。
-	 *
-	 * @return 手牌
-	 */
-	Tehai getTehai() {
-		return m_tehai;
-	}
+    /**
+     * 手牌を取得します。
+     * @return 手牌
+     */
+    Tehai getTehai() {
+        return m_tehai;
+    }
 
-	/** 河 */
-	private Hou kawa = new Hou();
+    /** 河 */
+    private Hou kawa = new Hou();
 
-	/**
-	 * 河を取得します。
-	 *
-	 * @return 河
-	 */
-	Hou getKawa() {
-		return kawa;
-	}
+    /**
+     * 河を取得します。
+     * @return 河
+     */
+    Hou getKawa() {
+        return kawa;
+    }
 
-	/** 自風 */
-	private int jikaze;
+    /** 自風 */
+    private int jikaze;
 
-	/**
-	 * 自風を取得します。
-	 *
-	 * @return 自風
-	 */
-	int getJikaze() {
-		return jikaze;
-	}
+    /**
+     * 自風を取得します。
+     * @return 自風
+     */
+    int getJikaze() {
+        return jikaze;
+    }
 
-	/**
-	 * 自風を設定します。
-	 *
-	 * @param jikaze
-	 *            自風
-	 */
-	void setJikaze(int jikaze) {
-		this.jikaze = jikaze;
-	}
+    /**
+     * 自風を設定します。
+     * @param jikaze 自風
+     */
+    void setJikaze(int jikaze) {
+        this.jikaze = jikaze;
+    }
 
-	/** 点棒 */
-	private int tenbou;
+    /** 点棒 */
+    private int tenbou;
 
-	/**
-	 * 点棒を取得します。
-	 *
-	 * @return
-	 */
-	int getTenbou() {
-		return tenbou;
-	}
+    /**
+     * 点棒を取得します。
+     * @return 点棒
+     */
+    int getTenbou() {
+        return tenbou;
+    }
 
-	/**
-	 * 点棒を設定します。
-	 *
-	 * @param tenbou
-	 *            点棒
-	 */
-	void setTenbou(int tenbou) {
-		this.tenbou = tenbou;
-	}
+    /**
+     * 点棒を設定します。
+     * @param tenbou 点棒
+     */
+    void setTenbou(int tenbou) {
+        this.tenbou = tenbou;
+    }
 
-	/**
-	 * 点棒を増やします。
-	 *
-	 * @param ten
-	 *            点
-	 */
-	void increaseTenbou(int ten) {
-		tenbou += ten;
-	}
+    /**
+     * 点棒を増やします。
+     * @param ten 点
+     */
+    void increaseTenbou(int ten) {
+        tenbou += ten;
+    }
 
-	/**
-	 * 点棒を減らします。
-	 *
-	 * @param ten
-	 *            点
-	 */
-	void reduceTenbou(int ten) {
-		tenbou -= ten;
-	}
+    /**
+     * 点棒を減らします。
+     * @param ten 点
+     */
+    void reduceTenbou(int ten) {
+        tenbou -= ten;
+    }
 
-	/** リーチ */
-	private boolean reach;
+    /** リーチ */
+    private boolean reach;
 
-	/**
-	 * リーチを取得します。
-	 *
-	 * @return リーチ
-	 */
-	boolean isReach() {
-		return reach;
-	}
+    /**
+     * リーチを取得します。
+     * @return リーチ
+     */
+    boolean isReach() {
+        return reach;
+    }
 
-	/**
-	 * リーチを設定します。
-	 *
-	 * @param reach
-	 *            リーチ
-	 */
-	void setReach(boolean reach) {
-		this.reach = reach;
-	}
+    /**
+     * リーチを設定します。
+     * @param reach リーチ
+     */
+    void setReach(boolean reach) {
+        this.reach = reach;
+    }
 
-	/** ダブルリーチ */
-	private boolean m_doubleReach;
+    /** ダブルリーチ */
+    private boolean m_doubleReach;
 
-	/**
-	 * ダブルリーチを取得します。
-	 *
-	 * @return ダブルリーチ
-	 */
-	boolean isDoubleReach() {
-		return m_doubleReach;
-	}
+    /**
+     * ダブルリーチを取得します。
+     * @return ダブルリーチ
+     */
+    boolean isDoubleReach() {
+        return m_doubleReach;
+    }
 
-	/**
-	 * ダブルリーチを設定します。
-	 *
-	 * @param reach
-	 *            ダブルリーチ
-	 */
-	void setDoubleReach(boolean a_doubleReach) {
-		this.m_doubleReach = a_doubleReach;
-	}
+    /**
+     * ダブルリーチを設定します。
+     * @param a_doubleReach ダブルリーチ
+     */
+    void setDoubleReach(boolean a_doubleReach) {
+        this.m_doubleReach = a_doubleReach;
+    }
 
-	private int m_suteHaisCount;
-	void setSuteHaisCount(int a_suteHaisCount) {
-		this.m_suteHaisCount = a_suteHaisCount;
-	}
-	int getSuteHaisCount() {
-		return m_suteHaisCount;
-	}
+    private int m_suteHaisCount;
 
-	private CountFormat m_countFormat = new CountFormat();
+    void setSuteHaisCount(int a_suteHaisCount) {
+        this.m_suteHaisCount = a_suteHaisCount;
+    }
 
-	boolean isTenpai() {
-		if (reach) {
-			return true;
-		}
+    int getSuteHaisCount() {
+        return m_suteHaisCount;
+    }
 
-		Hai addHai;
-		for (int id = 0; id < Hai.ID_ITEM_MAX; id++) {
-			addHai = new Hai(id);
-			m_countFormat.setCountFormat(m_tehai, addHai);
-			if (m_countFormat.getCombis(null) > 0) {
-				return true;
-			}
-		}
+    private CountFormat m_countFormat = new CountFormat();
 
-		return false;
-	}
+    boolean isTenpai() {
+        if (reach) {
+            return true;
+        }
 
-	/**
-	 * プレイヤーを初期化する。
-	 *
-	 * @param eventIf
-	 *            EventIF
-	 */
-	Player(EventIf eventIf) {
-		this.eventIf = eventIf;
-	}
+        Hai addHai;
+        for (int id = 0; id < Hai.ID_ITEM_MAX; id++) {
+            addHai = new Hai(id);
+            m_countFormat.setCountFormat(m_tehai, addHai);
+            if (m_countFormat.getCombis(null) > 0) {
+                return true;
+            }
+        }
 
-	/**
-	 * プレイヤーを初期化します。
-	 */
-	void init() {
-		// 手牌を初期化します。
-		m_tehai.initialize();
+        return false;
+    }
 
-		// 河を初期化します。
-		kawa.initialize();
+    /**
+     * プレイヤーを初期化する。
+     * @param eventIf EventIF
+     */
+    Player(EventIf eventIf) {
+        this.eventIf = eventIf;
+    }
 
-		// リーチを初期化します。
-		reach = false;
+    /**
+     * プレイヤーを初期化します。
+     */
+    void init() {
+        // 手牌を初期化します。
+        m_tehai.initialize();
 
-		m_ippatsu = false;
-		m_doubleReach = false;
-	}
+        // 河を初期化します。
+        kawa.initialize();
 
-	public void setIppatsu(boolean a_ippatsu) {
-		this.m_ippatsu = a_ippatsu;
-	}
+        // リーチを初期化します。
+        reach = false;
 
-	public boolean isIppatsu() {
-		return m_ippatsu;
-	}
+        m_ippatsu = false;
+        m_doubleReach = false;
+    }
 
-	private boolean m_ippatsu;
+    public void setIppatsu(boolean a_ippatsu) {
+        this.m_ippatsu = a_ippatsu;
+    }
+
+    public boolean isIppatsu() {
+        return m_ippatsu;
+    }
+
+    private boolean m_ippatsu;
 }
